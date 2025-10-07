@@ -1,0 +1,684 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+    margin: 0;
+    background: url('assets/Bgs.jpg') center/cover no-repeat fixed; 
+    color: #ffffff; 
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(198, 185, 185, 0.5);
+}
+
+header h1 {
+    font-size: 5rem;
+    color: #f80303;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 410px;
+}
+
+#bug-report {
+    padding: 40px;
+    text-align: center;
+}
+
+header ul li a {
+    text-decoration: wavy;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3ms ease;
+}
+
+header ul li a:hover {
+    color: #ff4655;
+}
+
+
+/* Bagian Banner */
+#banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+#banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#banner .banner-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+#banner:hover {
+    transform: scale(1);
+
+}
+
+#banner h2 {
+    font-size: 3rem;
+    margin-bottom: 6px;
+}
+#banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#banner button {
+    padding: 10px 20px;
+    font-size: 100rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#banner button:hover {
+    background-color: #0056b3;
+}
+
+/* Bagian Best Agent Section */
+#best-agent {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #1e1e1f, #292929);
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ff4655;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Title Section */
+#best-agent h2 {
+    font-size: 3rem;
+    color: #ff4655;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(255, 70, 85, 0.5);
+    text-align: center;
+}
+
+.best-agent-description {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Layout */
+.best-agent-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Agent Highlight */
+.agent-highlight {
+    flex: 2;
+    max-width: 600px;
+    text-align: center;
+}
+
+.agent-highlight img {
+    max-width: 200%;
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.agent-highlight img:hover {
+    transform: scale(1.1);
+}
+
+.agent-highlight h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.agent-role {
+    font-size: 1.2rem;
+    color: #ff4655;
+    margin-bottom: 15px;
+}
+
+.agent-summary {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+/* Agent Details */
+.agent-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #ddd;
+}
+
+.agent-extra {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.agent-extra p {
+    margin-bottom: 10px;
+}
+
+.agent-extra:last-child p {
+    margin-bottom: 0;
+}
+
+/* Best Agent Stats Section */
+.agent-stats {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.agent-stats h3 {
+    color: #ff4655;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.agent-stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+.agent-stats ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Best Agent Abilities Section */
+.agent-abilities {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.agent-abilities h3 {
+    color: #ff4655;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.agent-abilities table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.agent-abilities th, .agent-abilities td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+.agent-abilities th {
+    background: #333;
+    color: #ff4655;
+    font-weight: bold;
+}
+
+.agent-abilities td {
+    background: #222;
+    color: #ccc;
+}
+
+.agent-abilities tr:hover td {
+    background: #444;
+    color: #fff;
+}
+
+/* Bagian Agents Section */
+#agents-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.agent-card {
+    background: #1e1e1f;
+    color: #fff;
+    border: 1px solid #ff4655;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agent-card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: contain;
+    border-radius: 0;
+    margin-bottom: 10px;
+    background-color: #ffffff; 
+}
+
+.agent-card h3 {
+    font-size: 1.5rem;
+    color: #ff4655;
+    margin-bottom: 10px;
+}
+
+.agent-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.agent-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+#category-filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#role-filter {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ff4655;
+    background-color: #1e1e1f;
+    color: white;
+}
+
+/* Bagian Maps Section */
+#maps-list {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.map-card {
+    background: #1e1e1f;
+    color: #fff;
+    border: 1px solid #ff4655;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-title {
+    font-size: 3rem;
+    color: #ff4655;
+    margin-bottom: 10px;
+}
+
+.map-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.map-image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.map-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 90px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border: 10px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    border: 2px solid #ff4655;
+}
+
+.thumbnail.active {
+    border: 2px solid #ff4655;
+}
+#maps-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+#maps-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff4655;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#maps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.map-card {
+    background-color: #1f1f23;
+    border: 2px solid #ff4655;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.map-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.map-card:hover img {
+    transform: scale(1.1);
+}
+
+.map-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.map-card:hover::after {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.map-card h3 {
+    font-size: 1.8rem;
+    color: #ff4655;
+    margin-bottom: 15px;
+}
+
+.map-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.map-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Bagian News Section */
+.news-card ul {
+    list-style: disc; 
+    text-align: left; 
+    padding-left: 20px; 
+    margin-top: 10px; 
+}
+
+.news-card ul li {
+    margin-bottom: 5px; 
+    font-size: 1rem; 
+    color: #ccc; 
+}
+
+#news-section {
+    padding: 50px 20px;
+    background-color: #1e1e1f;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #1e1e1f;
+    color: #fff;
+    border: 1px solid #ff4655;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.news-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    color: #ff4655;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background: #c42222;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    
+    color: #ccc;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #ccc;
+}
+
+/* General Styling */
+.bug-page {
+    background: url('assets/BugBackground.jpg') center/cover no-repeat fixed;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff4655;
+}
+
+/* Bagian Bug Repot */
+#bug-report {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+#bug-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#bug-form h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#bug-form label {
+    display: block;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#bug-form input,
+#bug-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#bug-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#bug-form button {
+    background-color: #ff4655;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#bug-form button:hover {
+    background-color: #d03441;
+}
+
+
+/* Bagian About Us */
+#about-us {
+    background: linear-gradient(45deg, #a83232, #ff4d4d);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+}

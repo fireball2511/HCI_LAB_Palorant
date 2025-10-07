@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant - Agents</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Palorant</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="report-bug.html">Report Bug</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>      
+        <section id="category-filter">
+            <h2>Filter by Role</h2>
+            <select id="role-filter" onchange="filterAgents()">
+                <option value="All">All Roles</option>
+                <option value="Duelist">Duelist</option>
+                <option value="Sentinel">Sentinel</option>
+                <option value="Controller">Controller</option>
+                <option value="Initiator">Initiator</option>
+            </select>
+        </section>
+        <section id="agents-list">
+            <h2>Agents</h2>
+            <div class="agent-card" data-name="Phoenix" data-role="Duelist" data-desc="A fiery duelist with unique abilities.">
+                <img src="assets/Phoenix.jpeg" alt="Phoenix">
+                <br>
+                <h3>Phoenix</h3>
+                <p>Role: Duelist</p>
+                <br>
+                <p>Phoenix is a fiery Duelist who uses flames to dominate the battlefield. His abilities allow him to heal himself with fire, throw fireballs to damage enemies, and create firewalls to block their line of sight.</p>
+            </div>
+            <div class="agent-card" data-name="Jett" data-role="Duelist" data-desc="An agile duelist capable of high mobility and deadly precision.">
+                <img src="assets/Jett.jpeg" alt="Jett">
+                <br>
+                <h3>Jett</h3>
+                <p>Role: Duelist</p>
+                <br>
+                <p>Jett is an agile Duelist with high mobility. Her dashes and jumps give her the advantage to outmaneuver enemies, while her throwing knives deliver precise and deadly attacks.</p>
+            </div>
+            <div class="agent-card" data-name="Sage" data-role="Sentinel" data-desc="Master of healing and defense.">
+                <img src="assets/Sage.jpeg" alt="Sage">
+                <br>
+                <h3>Sage</h3>
+                <p>Role: Sentinel</p>
+                <br>
+                <p>Sage is the team healer and defender. She can heal teammates, create ice walls to slow or block enemies, and even revive fallen allies to turn the tide of battle.</p>
+            </div>
+            <div class="agent-card" data-name="Omen" data-role="Controller" data-desc="A shadowy figure who manipulates the battlefield using smokes and teleportation.">
+                <img src="assets/Omen.jpeg" alt="Omen">
+                <br>
+                <h3>Omen</h3>
+                <p>Role: Controller</p>
+                <br>
+                <p>Omen is a shadowy Controller who excels in disrupting enemy vision with his smokes. He can teleport to unexpected locations and disorient enemies with his abilities.</p>
+            </div>
+            <div class="agent-card" data-name="Sova" data-role="Initiator" data-desc="An archer with a mastery of recon and tracking abilities.">
+                <img src="assets/Sova.jpeg" alt="Sova">
+                <br>
+                <h3>Sova</h3>
+                <p>Role: Initiator</p>
+                <br>
+                <p>Sova is a master of reconnaissance. His bow skills reveal enemy positions, enabling his team to plan precise strategies and dominate the map.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Palorant. All rights reserved.</p>
+    </footer>
+    <script>
+        // Wait for the DOM content to load
+        document.addEventListener("DOMContentLoaded", () => {
+            const roleFilter = document.getElementById("role-filter"); // Dropdown for roles
+            const agentCards = document.querySelectorAll(".agent-card"); // All agent cards
+    
+            // Function to filter agents
+            const filterAgents = () => {
+                const selectedRole = roleFilter.value; // Get selected value
+    
+                // Loop through each agent card
+                agentCards.forEach(card => {
+                    const cardRole = card.dataset.role; // Get the role of the current card
+    
+                    // Show card if role matches or "All" is selected
+                    if (selectedRole === "All" || cardRole === selectedRole) {
+                        card.style.display = "block"; // Display the card
+                    } else {
+                        card.style.display = "none"; // Hide the card
+                    }
+                });
+            };
+    
+            // Attach the filterAgents function to the change event of the dropdown
+            roleFilter.addEventListener("change", filterAgents);
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant - Report Bug</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Palorant</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="report_bug.html">Report Bug</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bug-report">
+            <div class="form-container">
+                <form id="bug-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="server">Server:</label>
+                    <select id="server" name="server" required>
+                        <option value="" disabled selected>Select your server</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="America">America</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                    
+                    <label for="issue">Report Issue:</label>
+                    <textarea id="issue" name="issue" rows="5" placeholder="Describe the issue..." required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Palorant. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
